@@ -1,0 +1,552 @@
+```css
+/* =========================================
+   MYBROWSER — PIXEL / GLITCH STYLE
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    background:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px),
+        #101218;
+
+    background-size: 8px 8px;
+
+    color: #e8edf2;
+
+    font-family: "Courier New", monospace;
+
+    image-rendering: pixelated;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
+
+header {
+    position: relative;
+
+    min-height: 70vh;
+
+    padding: 90px 10%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    overflow: hidden;
+
+    border-bottom: 4px solid #e8edf2;
+}
+
+
+/* Pixel decoration */
+
+header::before {
+    content: "";
+
+    position: absolute;
+
+    width: 160px;
+    height: 160px;
+
+    right: 12%;
+    top: 25%;
+
+    background: #e8edf2;
+
+    opacity: 0.06;
+
+    box-shadow:
+        16px 16px 0 #e8edf2,
+        -16px 32px 0 #e8edf2,
+        32px -16px 0 #e8edf2;
+}
+
+
+/* Status text */
+
+header::after {
+    content: "/// BROWSER ONLINE ///";
+
+    position: absolute;
+
+    right: 8%;
+    bottom: 25px;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    opacity: 0.4;
+}
+
+
+/* =========================================
+   HERO CONTENT
+   ========================================= */
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+}
+
+
+.eyebrow {
+    margin: 0 0 25px;
+
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    opacity: 0.55;
+}
+
+
+h1 {
+    margin: 0;
+
+    font-size: clamp(55px, 10vw, 130px);
+
+    line-height: 0.8;
+
+    letter-spacing: -7px;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        6px 6px 0 #000,
+        11px 11px 0 rgba(255,255,255,0.12);
+
+    transform: rotate(-1deg);
+
+    transition: 0.15s;
+}
+
+
+h1:hover {
+    transform: rotate(1deg) translate(4px, -3px);
+
+    text-shadow:
+        -5px 5px 0 #000,
+        9px 9px 0 rgba(255,255,255,0.12);
+}
+
+
+.tagline {
+    margin: 35px 0;
+
+    max-width: 650px;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    opacity: 0.7;
+}
+
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+.buttons {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+.button {
+    display: inline-block;
+
+    padding: 15px 24px;
+
+    background: #e8edf2;
+
+    color: #101218;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    border: 3px solid #e8edf2;
+
+    box-shadow:
+        6px 6px 0 #000;
+
+    transition: 0.12s;
+
+    transform: rotate(-0.5deg);
+}
+
+
+.button:hover {
+    transform: translate(3px, 3px);
+
+    box-shadow:
+        2px 2px 0 #000;
+}
+
+
+.button.secondary {
+    background: transparent;
+
+    color: #e8edf2;
+}
+
+
+/* =========================================
+   SYSTEM STATUS
+   ========================================= */
+
+.system-status {
+    position: absolute;
+
+    right: 8%;
+    top: 30%;
+
+    z-index: 2;
+
+    padding: 15px;
+
+    border: 2px dashed #e8edf2;
+
+    font-size: 11px;
+
+    line-height: 1.8;
+
+    letter-spacing: 1px;
+
+    opacity: 0.4;
+
+    transform: rotate(2deg);
+}
+
+
+/* =========================================
+   MAIN
+   ========================================= */
+
+main {
+    padding: 90px 10%;
+}
+
+
+.section {
+    max-width: 1000px;
+
+    margin-bottom: 120px;
+}
+
+
+.section-label {
+    margin-bottom: 20px;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    opacity: 0.45;
+}
+
+
+.section h2,
+.download-section h2 {
+    display: inline-block;
+
+    margin: 0 0 35px;
+
+    padding: 12px 18px;
+
+    background: #e8edf2;
+
+    color: #101218;
+
+    font-size: 30px;
+
+    text-transform: uppercase;
+
+    box-shadow:
+        7px 7px 0 #000,
+        11px 11px 0 rgba(255,255,255,0.12);
+
+    transform: rotate(0.7deg);
+}
+
+
+/* =========================================
+   FEATURES
+   ========================================= */
+
+.feature-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-top: 45px;
+}
+
+
+.feature {
+    min-height: 220px;
+
+    padding: 25px;
+
+    border: 3px solid #e8edf2;
+
+    box-shadow:
+        7px 7px 0 #000;
+
+    transform: rotate(-0.5deg);
+
+    transition: 0.15s;
+}
+
+
+.feature:nth-child(2) {
+    transform: rotate(0.7deg);
+}
+
+
+.feature:nth-child(3) {
+    transform: rotate(-0.8deg);
+}
+
+
+.feature:hover {
+    transform: translate(3px, -3px) rotate(0deg);
+
+    box-shadow:
+        10px 10px 0 #000;
+}
+
+
+.feature span {
+    font-size: 12px;
+
+    opacity: 0.45;
+}
+
+
+.feature h3 {
+    margin: 30px 0 15px;
+
+    font-size: 24px;
+
+    letter-spacing: 2px;
+}
+
+
+.feature p {
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    opacity: 0.6;
+}
+
+
+/* =========================================
+   DOWNLOAD
+   ========================================= */
+
+.download-section {
+    position: relative;
+
+    padding: 60px 50px;
+
+    border: 4px dashed #e8edf2;
+
+    box-shadow:
+        10px 10px 0 #000;
+
+    transform: rotate(-0.4deg);
+
+    overflow: hidden;
+}
+
+
+.download-section::before {
+    content: "DOWNLOAD // DOWNLOAD // DOWNLOAD";
+
+    position: absolute;
+
+    right: -20px;
+    bottom: 15px;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    opacity: 0.12;
+
+    transform: rotate(-3deg);
+}
+
+
+.download-section p {
+    max-width: 700px;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    opacity: 0.7;
+}
+
+
+.download-section .buttons {
+    margin-top: 30px;
+}
+
+
+.version {
+    font-size: 12px !important;
+
+    letter-spacing: 2px;
+
+    opacity: 0.45 !important;
+}
+
+
+/* =========================================
+   UPDATES
+   ========================================= */
+
+.update-section ul {
+    padding-left: 25px;
+
+    line-height: 2;
+
+    opacity: 0.65;
+}
+
+
+.update-section li {
+    margin-bottom: 5px;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    padding: 35px 10%;
+
+    border-top: 3px solid #e8edf2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    opacity: 0.5;
+}
+
+
+footer a {
+    margin-left: 20px;
+
+    color: #e8edf2;
+
+    text-decoration: none;
+}
+
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    header {
+        min-height: 80vh;
+
+        padding: 70px 7%;
+
+        align-items: flex-start;
+
+        justify-content: center;
+    }
+
+
+    h1 {
+        font-size: 65px;
+
+        letter-spacing: -5px;
+    }
+
+
+    .system-status {
+        display: none;
+    }
+
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    main {
+        padding: 70px 7%;
+    }
+
+
+    .download-section {
+        padding: 40px 25px;
+    }
+
+
+    footer {
+        padding: 30px 7%;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
+```
